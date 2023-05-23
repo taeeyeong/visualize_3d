@@ -2,7 +2,7 @@
 - LAS 데이터 처리, 분석 및 시각화 scripts
 
 ## Set up
-//'''
+'''c
 pip install -r requirements.txt
 '''
 ## Code
