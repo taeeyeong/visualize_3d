@@ -27,10 +27,10 @@ for idx, label in enumerate(labels):
 
     clusters[label].append(points[idx])
 
-# # 결과 출력
-# for label, cluster_points in clusters.items():
-#     print(f"Cluster {label}:")
-#     for point in cluster_points:
-#         print(point)
-#     print("\n")
+# 결과 출력
+for label, cluster_points in clusters.items():
+    print(f"Cluster {label}:")
+    for point in cluster_points:
+        print(point)
+    print("\n")
 print(clusters.keys())

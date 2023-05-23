@@ -25,9 +25,10 @@ def find_common_points(points1, points2, tolerence=1e-5):
             
     return np.array(common_points)
     
+    
 # 두 LAS 파일 로드
-las1 = laspy.read("/Users/taeyeong/job/data/las/배경00_version.las")
-las2 = laspy.read("/Users/taeyeong/job/data/las/배경01_version.las")
+las1 = laspy.read("path/to/배경00_version.las")
+las2 = laspy.read("path/to/배경01_version.las")
 
 # 포인트 배열로 변환
 points1 = np.stack((las1.x, las1.y, las1.z), axis=-1)
@@ -37,11 +38,13 @@ points2 = np.stack((las2.x, las2.y, las2.z), axis=-1)
 standardized_points1 = normalize_points(points1)
 standardized_points2 = normalize_points(points2)
 
-# 이후 코드는 표준화된 좌표를 사용하여 두 데이터를 비교하십시오.
-common_points = find_common_points(standardized_points1, standardized_points2)
+print(standardized_points1)
+print(standardized_points2)
+# 이후 코드는 표준화된 좌표를 사용하여 두 데이터를 비교
+# common_points = find_common_points(standardized_points1, standardized_points2)
 
-for point in common_points:
-    print(point)
+# for point in common_points:
+#     print(point)
 # 각 포인트 배열을 튜플 세트로 변환
 # points1_set = set(tuple(point) for point in standardized_points1)
 # points2_set = set(tuple(point) for point in standardized_points2)

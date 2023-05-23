@@ -3,8 +3,8 @@ import numpy as np
 import laspy
 
 # 두 LAS 파일 로드
-las1 = laspy.read("/Users/taeyeong/job/data/las/배경00_cloud.las")
-las2 = laspy.read("/Users/taeyeong/job/data/las/배경01_cloud.las")
+las1 = laspy.read("path/to/배경00_cloud.las")
+las2 = laspy.read("path/to/배경01_cloud.las")
 
 # 포인트 배열로 변환
 points1 = np.stack((las1.x, las1.y, las1.z), axis=-1)
