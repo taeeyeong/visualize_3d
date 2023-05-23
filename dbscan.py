@@ -3,7 +3,7 @@ import numpy as np
 from sklearn.cluster import DBSCAN
 
 # LAS 파일 로드
-las = laspy.read("/Users/taeyeong/job/data/las/배경01_cloud.las")
+las = laspy.read("/path/to/배경01_cloud.las")
 
 # 포인트 배열로 변환
 points = np.stack((las.x, las.y, las.z), axis=-1)
