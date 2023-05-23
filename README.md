@@ -2,11 +2,10 @@
 - LAS 데이터 처리, 분석 및 시각화 scripts
 
 ## Set up
-'''bash
+
 
     pip install -r requirements.txt
 
-'''
 ## Code
 - data_loader.py: las 데이터의 (latitude, longitude, altitude)좌표를 지구 표준 형상 좌표계로 변환
 - dbscan.py: dbscan 클러스터링 구현 코드 
